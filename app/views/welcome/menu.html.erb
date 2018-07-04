@@ -1,1 +1,10 @@
 <h1>Menu</h1>
+
+<ul class="nav nav-pills">
+	<% ['Breakfast', 'Lunch', 'Dinner', 'Happy Hour'].each do |section| %>
+  <li class="nav-item">
+    <a class="nav-link active" href="#"><%= section %></a>
+
+  </li>
+  <% end %>
+</ul>
