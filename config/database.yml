@@ -53,3 +53,5 @@ production:
   #database: foodtruck_production
   #username: foodtruck
   #password: <%= ENV['FOODTRUCK_DATABASE_PASSWORD'] %>
+
+
