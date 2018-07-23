@@ -1,10 +1,27 @@
 <h1>Menu</h1>
 
 <ul class="nav nav-pills">
-	<% ['Breakfast', 'Lunch', 'Dinner', 'Happy Hour'].each do |section| %>
+	<% Section.all.each do |section| %>
+
+
+<%-# commented line -%>
+<%-# <% ['Breakfast', 'Lunch', 'Dinner', 'Happy Hour'].each do |section| % -%>
+
+	
   <li class="nav-item">
-    <a class="nav-link active" href="#"><%= section %></a>
+    <%= link_to section.name, menu_path(section: section.name), 
+    class: "nav-link #{'active' if params[:section] == section.name}"%>
 
   </li>
   <% end %>
 </ul>
+
+<% if @section %>
+	<% @section.food_items.each do |food| %>
+	<h3><%= food.name %></h3>
+	<p><%= food.description %></p>
+	<p><%= food.price %></p>
+	<p><%= food.Calories %></p>
+	<p><%= food.Type %></p>
+	<% end %>
+<% end %>

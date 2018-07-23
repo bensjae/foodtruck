@@ -7,6 +7,9 @@ class WelcomeController < ApplicationController
   end
 
   def menu
+    if params[:section]
+      @section = Section.where(name: params[:section]).first
+    end
 
   end
 
