@@ -22,13 +22,7 @@ Responsive navbar-brand image CSS
 - add 100% height and width auto ... similar to how bootstrap img-responsive class works
 ***********************************/
 
-.navbar-brand {
-  padding: 0px;
+#navbar-logo {
+  height: auto;
   width: 200px;
-}
-
-.navbar-brand>img {
-  height: 100%;
-  padding: 15px;
-  width: auto;
 }
