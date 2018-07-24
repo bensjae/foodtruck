@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: #foodtruck_development
+  database: foodtruck_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: foodtruck_production
-  username: foodtruck
-  password: <%= ENV['FOODTRUCK_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  #<<: *default
+  #database: foodtruck_production
+  #username: foodtruck
+  #password: <%= ENV['FOODTRUCK_DATABASE_PASSWORD'] %>
+
+
