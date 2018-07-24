@@ -15,3 +15,14 @@
  */
 
  @import "bootstrap";
+
+/**********************************
+Responsive navbar-brand image CSS
+- Remove navbar-brand padding for firefox bug workaround
+- add 100% height and width auto ... similar to how bootstrap img-responsive class works
+***********************************/
+
+#navbar-logo {
+  height: auto;
+  max-width: 100%;
+}
