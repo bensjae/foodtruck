@@ -30,5 +30,6 @@ chdir APP_ROOT do
   system! 'bin/rails db:setup'
 
   puts "\n== Restarting application server =="
-  system! 'bin/rails restart'
+  # system! 'bin/rails restart'
+  system! 'bin/rails server'
 end
