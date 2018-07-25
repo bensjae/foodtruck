@@ -22,17 +22,13 @@
 		<thead>
 			<th>Name</th>
 			<th>Price</th>
-			<th>Description</th>
 			<th>Calories</th>
-			<th>Type</th>
 		<div class="tbody">
 	<% @section.food_items.each do |food| %>
 		<tr>
 			<td><%= food.name %></td>
 			<td><%= number_to_currency food.price %></td>
-			<td><%= food.description %></td>
 			<td><%= food.Calories %></td>
-			<td><%= food.Type %></td>
 		</tr>
 	<% end %>
 </tbody>
