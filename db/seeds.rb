@@ -6,4 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Section.create(name: 'Breakfast')
+Section.create(name: 'Regular')
+Section.create(name: 'Vegetarian')
+Section.create(name: 'Happy Hour')
+Section.create(name: 'Dessert')
+Section.create(name: 'Drinks')
