@@ -18,11 +18,14 @@
 </ul>
 
 <% if @section %>
+	<table class="table">
+		<div class="tbody">
 	<% @section.food_items.each do |food| %>
-	<h3><%= food.name %></h3>
-	<p><%= food.description %></p>
-	<p><%= food.price %></p>
-	<p><%= food.Calories %></p>
-	<p><%= food.Type %></p>
+		<tr>
+			<td><%= food.name %></td>
+			<td><%= number_to_currency food.price %></td>
+			<td><%= food.description %></td>
+			<td><%= food.Calories %></td>
+			<td><%= food.Type %></td>
 	<% end %>
 <% end %>

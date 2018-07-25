@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :section_id %>
-    <%= form.text_field :section_id %>
+    <%= form.select :section_id, Section.all.map{|e| [e.name, e.id]} %>
   </div>
 
   <div class="actions">
