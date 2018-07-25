@@ -6,7 +6,6 @@
   <thead class = "thead thead-default">
     <tr>
       <th>Name</th>
-      <th>Description</th>
       <th>Price</th>
       <th>Calories</th>
       <th>Section</th>
@@ -18,8 +17,7 @@
     <% @food_items.each do |food_item| %>
       <tr>
         <td><%= food_item.name %></td>
-        <td><%= food_item.description %></td>
-        <td><%= food_item.price %></td>
+        <td><%= number_to_currency food_item.price %></td>
         <td><%= food_item.Calories %></td>
         <td><%= food_item.section.name %></td>
         <td><%= link_to 'Show', food_item %></td>
