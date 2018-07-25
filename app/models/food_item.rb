@@ -1,3 +1,4 @@
 class FoodItem < ApplicationRecord
-  belongs_to :section
+	validates :name, :section, presence: true
+	belongs_to :section
 end
