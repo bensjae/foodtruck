@@ -52,7 +52,7 @@ test:
 #
 production:
   url: <%= ENV['DATABASE_URL'] %>
-  <<: *default
+  #<<: *default
   #database: foodtruck_production
   #username: foodtruck
   #password: <%= ENV['FOODTRUCK_DATABASE_PASSWORD'] %>
