@@ -19,6 +19,12 @@
 
 <% if @section %>
 	<table class="table">
+		<thead>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Calories</th>
+			<th>Type</th>
 		<div class="tbody">
 	<% @section.food_items.each do |food| %>
 		<tr>
@@ -27,5 +33,12 @@
 			<td><%= food.description %></td>
 			<td><%= food.Calories %></td>
 			<td><%= food.Type %></td>
+		</tr>
 	<% end %>
+</tbody>
+</table>
+<% else %>
+	<div class="alert alert-info">Please Select Menu</div>
 <% end %>
+
+
