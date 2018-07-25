@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @food_item.description %>
-</p>
-
-<p>
   <strong>Price:</strong>
-  <%= @food_item.price %>
+  <%= number_to_currency @food_item.price %>
 </p>
 
 <p>
