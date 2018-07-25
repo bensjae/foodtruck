@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['mysql2://b57f5a8526f4ad:281a290a@us-cdbr-iron-east-04.cleardb.net/heroku_c0f7ea9fccf697e?reconnect=true'] %>
   <<: *default
   #database: foodtruck_production
   #username: foodtruck
