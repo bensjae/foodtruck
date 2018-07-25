@@ -10,6 +10,9 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
+  #adapter: postgresql
+  #encoding: unicode
+  #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -48,7 +51,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  url: <%= ENV['mysql2://b57f5a8526f4ad:281a290a@us-cdbr-iron-east-04.cleardb.net/heroku_c0f7ea9fccf697e?reconnect=true'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
   #database: foodtruck_production
   #username: foodtruck
