@@ -50,11 +50,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  url: <%= ENV['DATABASE_URL'] %>
+#production:
+#  url: <%= ENV['DATABASE_URL'] %>
   #<<: *default
   #database: foodtruck_production
   #username: foodtruck
   #password: <%= ENV['FOODTRUCK_DATABASE_PASSWORD'] %>
 
 
+production:
+      adapter: postgresql
+      database: my_database_production
+      pool: 5
+      timeout: 5000
