@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :customer %>
-    <%= form.text_field :customer %>
+    <%= form.text_field :customer, placeholder: "e.g. John Smith" %>
   </div>
 
 
@@ -24,12 +24,12 @@
 
   <div class="field">
     <%= form.label :cost %>
-    <%= form.text_field :cost, :value => params[:cost] %>
+    <%= form.text_field :cost, :value => params[:cost], :required => 'required' %>
   </div>
 
   <div class="field">
     <%= form.label :food_item_id %>
-    <%= form.select :food_item_id, options_from_collection_for_select(FoodItem.order(:name).all, "id", "name", params[:item]) %>
+    <%= form.select :food_item_id, options_from_collection_for_select(FoodItem.order(:name).all, "id", "name", params[:item]), :required => 'required' %>
   </div>
 
   <div class="actions">

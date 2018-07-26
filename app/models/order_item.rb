@@ -1,9 +1,5 @@
 class OrderItem < ApplicationRecord
-  belongs_to :food_item
-
-  after_create :make_customer
-
-  def make_customer
-  	Customer.create
-  end
+    validates :cost, :food_item, presence: true
+    validates :cost, :numericality => {:only_decimal => true}
+    belongs_to :food_item
 end
