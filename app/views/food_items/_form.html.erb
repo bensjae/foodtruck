@@ -13,22 +13,24 @@
 
   <div class="form-group">
     <%= form.label :name, class: 'form-control-label' %>
-    <%= form.text_field :name, class: 'form-control' %>
+    <%= form.text_field :name, class: 'form-control', autofocus: true, placeholder: "e.g. Beef Taco", :required => 'required' %>
+</div>
+
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, placeholder: "e.g. 15.00", :required => 'required' %>
   </div>
 
   <div class="field">
-    <%= form.label :Calories %>
-    <%= form.text_field :Calories %>
+    <%= form.label :calories %>
+    <%= form.text_field :Calories, placeholder: "e.g. 1200", :required => 'required' %>
   </div>
 
   <div class="field">
     <%= form.label :section_id %>
-    <%= form.select :section_id, Section.all.map{|e| [e.name, e.id]} %>
+    <%= form.select :section_id, Section.all.map{|e| [e.name, e.id]}, :required => 'required' %>
   </div>
 
   <div class="actions">
