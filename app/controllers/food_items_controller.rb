@@ -4,7 +4,7 @@ class FoodItemsController < ApplicationController
   # GET /food_items
   # GET /food_items.json
   def index
-    if params[:food_item] and params[:food_item][:section_id]
+    if params[:food_item] and params[:food_item][:section_id] != ""
       @food_items = FoodItem.search(params[:food_item][:section_id])
     else
       @food_items = FoodItem.all

@@ -4,7 +4,7 @@ class FoodItem < ApplicationRecord
   has_many :order_items, dependent: :destroy
   
   def self.search(search)
-		where("section_id LIKE ?", "%#{search}%")
+		where("section_id LIKE ?", "#{search}")
 	end
   
 end
