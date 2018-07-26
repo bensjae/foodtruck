@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :order_items
   resources :food_items
   #get 'welcome/index'
   

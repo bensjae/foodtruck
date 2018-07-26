@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_063804) do
+ActiveRecord::Schema.define(version: 2018_07_26_011106) do
 
   create_table "food_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,20 @@ ActiveRecord::Schema.define(version: 2018_07_23_063804) do
     t.index ["section_id"], name: "index_food_items_on_section_id"
   end
 
+  create_table "order_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "customer"
+    t.decimal "cost", precision: 10
+    t.bigint "food_items_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_items_id"], name: "index_order_items_on_food_items_id"
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sections", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -33,4 +47,5 @@ ActiveRecord::Schema.define(version: 2018_07_23_063804) do
   end
 
   add_foreign_key "food_items", "sections"
+  add_foreign_key "order_items", "food_items", column: "food_items_id"
 end
