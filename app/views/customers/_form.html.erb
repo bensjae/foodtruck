@@ -23,9 +23,7 @@
 
   <div class="field">
     <%= form.label :order_item_id %>
-    <%= form.text_field :order_item_id %>
-  </div>
-
+    <%= form.text_field :order_item_id, :value => params[:order_item_id], :required => 'required' %>
   <div class="actions">
     <%= form.submit %>
   </div>
