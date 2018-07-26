@@ -2,6 +2,11 @@
 
 <h1>Food Items</h1>
 
+<%= form_tag food_items_path, :method => 'get' do %>
+  <%= collection_select :food_item, :section_id, Section.all, :id, :name, :prompt => "All" %>
+  <%= submit_tag "Filter" %>
+<% end %>
+
 <table class = "table table-striped">
   <thead class = "thead thead-default">
     <tr>
@@ -22,12 +27,11 @@
         <td><%= food_item.section.name %></td>
         <td><%= link_to 'Show', food_item %></td>
         <td><%= link_to 'Edit', edit_food_item_path(food_item) %></td>
-        <td><%= link_to 'Destroy', food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Food Item', new_food_item_path %>
