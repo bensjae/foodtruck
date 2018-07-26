@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/welcome/menu.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+              <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -230,7 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1532557183884</updated>
       <workItem from="1532557185972" duration="8789000" />
-      <workItem from="1532626169941" duration="1694000" />
+      <workItem from="1532626169941" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="test for sean">
       <created>1532562449339</created>
@@ -257,7 +257,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8693000" />
+    <option name="totallyTimeSpent" value="8787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -496,7 +496,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/welcome/menu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+          <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
         </state>
       </provider>
     </entry>
