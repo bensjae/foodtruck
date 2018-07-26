@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :cost %>
-    <%= form.text_field :cost %>
+    <%= form.text_field :cost, :value => params[:cost] %>
   </div>
 
   <div class="field">
     <%= form.label :food_item_id %>
-    <%= form.select :food_item_id, FoodItem.all.map{|e| [e.name, e.id]} %>
+    <%= form.select :food_item_id, options_from_collection_for_select(FoodItem.order(:name).all, "id", "name", params[:item]) %>
   </div>
 
   <div class="actions">

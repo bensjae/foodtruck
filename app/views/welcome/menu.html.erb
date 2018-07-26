@@ -29,6 +29,11 @@
 			<td><%= food.name %></td>
 			<td><%= number_to_currency food.price %></td>
 			<td><%= food.Calories %></td>
+            <td>
+
+<%= link_to "Order", new_order_item_path({:cost => food.price, :item => food}), :class => "btn btn-primary" %>
+
+            </td>
 		</tr>
 	<% end %>
 </tbody>
