@@ -1,0 +1,26 @@
+<div class="mu-tab-content-area">
+  <div class="row">
+    <% if @food_items.size == 0 %>
+      <p class="text-center"> No item to display</p>
+    <% else %>
+      <% @food_items_split = @food_items.in_groups_of((@food_items.size/2.0).ceil, false) %>
+      <div class="col-md-6">
+        <ul class="mu-menu-item-nav">
+          <% @food_items_split[0].each do |food_item| %>
+            <%= render "food_items/food_item", food_item: food_item%>
+          <% end %>
+        </ul>
+      </div>
+
+      <% if @food_items_split.size > 1 %>
+        <div class="col-md-6">
+          <ul class="mu-menu-item-nav">
+            <% @food_items_split[1].each do |food_item| %>
+              <%= render "food_items/food_item", food_item: food_item%>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
