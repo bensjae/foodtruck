@@ -25,7 +25,7 @@
 			<th>Calories</th>
 		<div class="tbody">
 	<% @section.food_items.each do |food| %>
-        <body>Number of entries: <%=@section.all.size %> <br></body>
+        <body>Number of entries: <%=@section.food_items.all.size %> <br></body>
 		<tr>
 			<td><%= food.name %></td>
 			<td><%= number_to_currency food.price %></td>
