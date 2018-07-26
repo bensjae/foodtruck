@@ -12,17 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :customer %>
-    <%= form.text_field :customer, placeholder: "e.g. John Smith" %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
-  </div>
-
-  <div class="field">
     <%= form.label :cost %>
     <%= form.text_field :cost, :value => params[:cost], :required => 'required' %>
   </div>
