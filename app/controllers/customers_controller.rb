@@ -5,11 +5,11 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
-   # @customer_order = Customer.joins("INNER JOIN order_items, food_items ON customers.name = order_items.customer, food_items.id = order_items.food_item_id")
+    @customer_order = Customer.joins("INNER JOIN order_items ON customers.name = order_items.customer")
    # @order_food = Order_Items.joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
    # @customer_order = Customer.joins(:@order_food).where("customers.name = " + @order_food.customer + "")
 
-    @customer_order = Customer.joins(:order_items,:food_items).where("customers.name = order_items.customer, food_items.id = order_items.food_item_id")
+ #   @customer_order = Customer.joins(:order_items,:food_items).where("customers.name = order_items.customer, food_items.id = order_items.food_item_id")
 
   end
 
