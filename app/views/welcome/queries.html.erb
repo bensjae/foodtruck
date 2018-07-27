@@ -1,0 +1,7 @@
+<h1>Queries</h1>
+
+
+<% @joinQuery = Customer.select("name", "phone_num").joins(order_item: :food_item).where("food_items.name = 'Beef Taco'")%>
+<% @joinQuery.each do |p| %>
+  <%= p.name %> - <%= p.phone_num %><br>
+<% end %>
