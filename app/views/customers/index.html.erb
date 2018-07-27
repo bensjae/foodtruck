@@ -29,4 +29,24 @@
 <br>
 
 <%= link_to 'New Customer', new_customer_path %>
-<% @big_eaters %>
+
+
+<table class = "table table-striped">
+  <thead class = "thead thead-default">
+  <tr>
+    <th>Name</th>
+    <th>Phone Number</th>
+    <th>Order Number</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @big_eaters.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.order_item_id %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
