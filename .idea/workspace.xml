@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a069201-1ad9-4b5d-8dc8-f032a9edad73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/controllers/customers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/customers_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/customers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/customers/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -44,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customers_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customers_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/customers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="178" lean-forward="true" selection-start-line="7" selection-start-column="178" selection-end-line="7" selection-end-column="178" />
+            <state relative-caret-position="170">
+              <caret line="10" column="105" lean-forward="true" selection-start-line="10" selection-start-column="105" selection-end-line="10" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="269">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -82,8 +83,8 @@
         <option value="$PROJECT_DIR$/app/views/customers/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/customers/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/food_items/_food_item.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/customers/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/customers/index.html.erb" />
       </list>
     </option>
   </component>
@@ -224,7 +225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13093000" />
+    <option name="totallyTimeSpent" value="13588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -481,17 +482,17 @@
         <state relative-caret-position="-674" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/customers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        <state relative-caret-position="170">
+          <caret line="10" column="105" lean-forward="true" selection-start-line="10" selection-start-column="105" selection-end-line="10" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/customers_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="178" lean-forward="true" selection-start-line="7" selection-start-column="178" selection-end-line="7" selection-end-column="178" />
+        <state relative-caret-position="269">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
         </state>
       </provider>
     </entry>
