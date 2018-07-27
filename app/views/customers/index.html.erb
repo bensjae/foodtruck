@@ -36,15 +36,17 @@
   <tr>
     <th>Name</th>
     <th>Order Number</th>
+    <th>Food Name</th>
     <th colspan="2"></th>
   </tr>
   </thead>
 
   <tbody>
-  <% @customer_order.each do |customer| %>
+  <% @customer_order.each do |customer_order| %>
     <tr>
-      <td><%= customer.name %></td>
-      <td><%= customer.order_item_id %></td>
+      <td><%= customer_order.name %></td>
+      <td><%= customer_order.order_item_id %></td>
+      <td><%= customer_order.food_item_id %></td>
     </tr>
   <% end %>
   </tbody>
