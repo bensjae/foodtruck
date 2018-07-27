@@ -5,6 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
+    @big_eaters = Customer.joins("INNER JOIN orders ON customers.id = orders.customer")
   end
 
   # GET /customers/1
