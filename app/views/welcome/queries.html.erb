@@ -32,6 +32,9 @@
     .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
     .group("name")
     .having("food_cal > " + @avg_cal.to_s) %>
+
+<h1>Big Eaters Query</h1>
+
 <p>
 We want to find the big eaters. These are customers whose average calories of orders exceed the average calories of all foods in the menu
 </p>
