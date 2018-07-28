@@ -5,15 +5,6 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
-
-    @avg_cal= FoodItem.average("Calories")
-
-    @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
-                          .joins("INNER JOIN order_items ON customers.name = order_items.customer")
-                          .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
-                          .group("name")
-                          .having("food_cal > " + @avg_cal.to_s)
-
   end
 
   # GET /customers/1
