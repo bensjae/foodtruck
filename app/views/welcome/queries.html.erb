@@ -26,6 +26,7 @@
 <br>
 <br>
 
+<h1>Big Eaters Query</h1>
 <% @avg_cal= FoodItem.average("Calories") %>
 <% @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
     .joins("INNER JOIN order_items ON customers.name = order_items.customer")
@@ -33,7 +34,7 @@
     .group("name")
     .having("food_cal > " + @avg_cal.to_s) %>
 <p>
-We want to find the big eaters. These are customers whose average calories of orders exceed the average calories of all foods in the menu
+We want to find the big eaters. These are customers whose average calorie of orders exceed the average calorie of all foods in the menu
 </p>
 
 <table class = "table table-striped">
