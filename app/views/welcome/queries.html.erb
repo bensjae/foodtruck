@@ -1,7 +1,31 @@
 <h1>Queries</h1>
 
 
-<% @joinQuery = Customer.select("name", "phone_num").joins(order_item: :food_item).where("food_items.name = 'Beef Taco'")%>
+<h4>Oh no! There has been a reported food contamination case with _____. Find all the phone numbers of customers that ordered it"</h4>
+
+<%= form_tag form_submit_path do %>
+<%= form_for @FoodName do |f| %>
+  <%= f.select :food_item_id, FoodItem.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+  <%= f.submit %>
+<% end %>
+<% end %>
+
+
+
+
+
+<%= form_tag form_submit_path do %>
+  <label for="lookup">Lookup</label>
+  <%= text_field_tag :lookup %>
+ <%= submit_tag "Submit" %>
+<% end %>
+
+<%= text_field_tag :test, value: params[:lookup]%>
+
+
+
+
+<% @joinQuery = Customer.select("name", "phone_num").joins(order_item: :food_item).where("food_items.name = 'cheese'")%>
 <% @joinQuery.each do |p| %>
   <%= p.name %> - <%= p.phone_num %><br>
 <% end %>
