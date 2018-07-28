@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   def index
     @customers = Customer.all
 
-    @avg_cal= FoodItem.average(":Calories::int")
+    @avg_cal= FoodItem.average(:Calories::int)
 
     @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
                           .joins("INNER JOIN order_items ON customers.name = order_items.customer")
