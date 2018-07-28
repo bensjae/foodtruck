@@ -1,46 +1,37 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Menu</h1>
 
 <ul class="nav nav-pills">
-	<% Section.all.each do |section| %>
-	
-
-
-<%-# commented line -%>
-<%-# <% ['Breakfast', 'Lunch', 'Dinner', 'Happy Hour'].each do |section| % -%>
-
-	
-  <li class="nav-item">
-    <%= link_to section.name, menu_path(section: section.name), 
-    class: "nav-link #{'active' if params[:section] == section.name}"%>
-
-  </li>
-  <% end %>
+    <% Section.all.each do |section| %>
+    <li class="nav-item">
+        <%= link_to section.name, menu_path(section: section.name), 
+        class: "nav-link #{'active' if params[:section] == section.name}"%>
+    </li>
+    <% end %>
 </ul>
 
 <% if @section %>
-	<table class="table">
-		<thead>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Calories</th>
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Calories</th>
             <th></th>
-		<div class="tbody">
-      <body>Number of entries: <%=@section.food_items.all.size %> <br></body>
-
+        <div class="tbody">
+      <body>Number of items: <%=@section.food_items.all.size %><br><br></body>
       <% @section.food_items.each do |food| %>
-		<tr>
-			<td><%= food.name %></td>
-			<td><%= number_to_currency food.price %></td>
-			<td><%= food.Calories %></td>
+        <tr>
+            <td><%= food.name %></td>
+            <td><%= number_to_currency food.price %></td>
+            <td><%= food.Calories %></td>
             <td>
             <%= link_to "Order", new_order_item_path({:cost => food.price, :item => food}), :class => "btn btn-info" %>
             </td>
-		</tr>
-	<% end %>
+        </tr>
+    <% end %>
 </div>
 </table>
 <% else %>
-	<div class="alert alert-info">Please Select Menu</div>
+    <div class="alert alert-info">Please Select Menu</div>
 <% end %>
-
-

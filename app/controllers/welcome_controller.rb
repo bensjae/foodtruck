@@ -2,8 +2,7 @@ class WelcomeController < ApplicationController
   def index
   end
 
-  def sample
-  	@controller_message = "Hello From Controller"
+  def queries
   end
 
   def menu
@@ -20,6 +19,5 @@ class WelcomeController < ApplicationController
   def order
 
   end
-
 
 end

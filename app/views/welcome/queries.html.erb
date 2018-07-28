@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beef Contamination Query</h1>
+
+<p>Oh no! As usual, there was mad cow disease in the beef sold. Below is all the phone number of customers that ordered a beef food item.</p>
+
+<% @joinQuery = Customer.select("updated_at", "name", "phone_num").joins(order_item: :food_item).where("food_items.name LIKE ?", "%beef%")%>
+
+<table class="table">
+    <thead>
+        <th>Order Date and Time</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th></th>
+    <div class="tbody">
+        <% @joinQuery.each do |j| %>
+            <tr>
+                <td><%= j.updated_at %></td>
+                <td><%= j.name %></td>
+                <td><%= j.phone_num %></td>
+            </tr>
+        <% end %>
+    </div>
+</table>
