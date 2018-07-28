@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
     #                       .joins("INNER JOIN order_items ON customers.name = order_items.customer")
     #                       .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
     #                       .group("name, order_id")
-    @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
+    @customer_order = Customer.select("customers.name AS name, sum(food_items.calories) AS food_cal")
                           .joins("INNER JOIN order_items ON customers.name = order_items.customer")
                           .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
                           .group("name")
