@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
-    @avg_cal_per_customer = FoodItems.select("avg(food_items.calories)")
+    @avg_cal_per_customer = Food_Items.select("avg(food_items.calories)")
     @customer_order = Customer.select("customers.name AS name, order_items.id AS order_id, food_items.calories AS food_cal")
                           .joins("INNER JOIN order_items ON customers.name = order_items.customer")
                           .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
