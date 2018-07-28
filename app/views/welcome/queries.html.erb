@@ -6,7 +6,7 @@
 
 <% @joinQuery = Customer.select("updated_at", "name", "phone_num").joins(order_item: :food_item).where("food_items.name LIKE ?", "%beef%")%>
 
-<table class="table">
+  <table class="table">
     <thead>
         <th>Order Date and Time</th>
         <th>Name</th>
@@ -21,4 +21,40 @@
             </tr>
         <% end %>
     </div>
+</table>
+
+<br>
+<br>
+
+<% @avg_cal= FoodItem.average("Calories") %>
+<% @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
+    .joins("INNER JOIN order_items ON customers.name = order_items.customer")
+    .joins("INNER JOIN food_items ON food_items.id = order_items.food_item_id")
+    .group("name")
+    .having("food_cal > " + @avg_cal.to_s) %>
+
+<h1>Big Eaters Query</h1>
+
+<p>
+We want to find the big eaters. These are customers whose average calories of orders exceed the average calories of all foods in the menu
+</p>
+
+<table class = "table table-striped">
+  <thead class = "thead thead-default">
+  <tr>
+    <th>Name</th>
+    <th>Food Calories</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+
+  <tbody>
+  <% @customer_order.each do |customer_order| %>
+    <tr>
+      <td><%= customer_order.name %></td>
+      <td><%= customer_order.food_cal %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>
