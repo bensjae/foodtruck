@@ -2,6 +2,11 @@
 
 <h1>Food Items</h1>
 
+<%= form_tag food_items_path, :method => 'get' do %>
+   <%= collection_select :food_item, :section_id, Section.all, :id, :name, :prompt => "All" %>
+   <%= submit_tag "Filter" %>
+ <% end %>
+
 <table class = "table table-striped">
   <thead class = "thead thead-default">
     <tr>
