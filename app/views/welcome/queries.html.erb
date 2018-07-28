@@ -26,7 +26,6 @@
 <br>
 <br>
 
-<h1>Big Eaters Query</h1>
 <% @avg_cal= FoodItem.average("Calories") %>
 <% @customer_order = Customer.select("customers.name AS name, avg(food_items.calories) AS food_cal")
     .joins("INNER JOIN order_items ON customers.name = order_items.customer")
