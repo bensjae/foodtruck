@@ -14,8 +14,5 @@ Rails.application.routes.draw do
   match ':controller(/:action(/:id))', :via => :get
 
  root 'welcome#menu'
-
- post :form_submit, to: "welcome#queries", as: :form_submit
-
-
+ 
 end

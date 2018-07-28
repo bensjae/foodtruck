@@ -3,7 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def queries
-      @FoodName = FoodItem.name
   end
 
   def menu
@@ -20,11 +19,5 @@ class WelcomeController < ApplicationController
   def order
 
   end
-
-  def form_submit
-      session[:value] = params[:value]
-      lookup = params[:lookup]
-  end
-
 
 end
