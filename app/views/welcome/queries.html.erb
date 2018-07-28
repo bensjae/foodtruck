@@ -22,3 +22,29 @@
         <% end %>
     </div>
 </table>
+
+<br>
+<br>
+<p>
+We want to find the big eaters. These are customers whose average calories of orders exceed the average calories of all foods in the menu
+</p>
+
+<table class = "table table-striped">
+  <thead class = "thead thead-default">
+  <tr>
+    <th>Name</th>
+    <th>Food Calories</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+
+  <tbody>
+  <% @customer_order.each do |customer_order| %>
+    <tr>
+      <td><%= customer_order.name %></td>
+      <td><%= customer_order.food_cal %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
